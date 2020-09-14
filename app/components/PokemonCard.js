@@ -16,8 +16,10 @@ const useStyles = makeStyles({
 	},
 });
 
-function PokemonCard() {
+function PokemonCard(props) {
 	const classes = useStyles();
+
+	const { name, pokeId, imageUrl, types } = props.pokemon;
 
 	return (
 		<div className="pokemonCard">
@@ -27,18 +29,19 @@ function PokemonCard() {
 						<CardMedia
 							className={classes.media}
 							component="img"
-							image="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png"
-							title="Bulbasaur"
+							image={imageUrl}
+							title={name}
 						/>
 					</CardActionArea>
 					<CardContent>
 						<div className="pokemonCard__footer">
-							<h4>Bublasaur</h4>
-							<h4>#1</h4>
+							<h4>{name}</h4>
+							<h4>#{pokeId}</h4>
 						</div>
 						<div className="pokemonCard__tags">
-							<h4>Grass</h4>
-							<h4>Poison</h4>
+							{types.map((type) => (
+								<h4>{type}</h4>
+							))}
 						</div>
 					</CardContent>
 				</Card>

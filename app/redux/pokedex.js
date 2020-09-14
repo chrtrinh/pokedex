@@ -1,9 +1,31 @@
-export const setPokemon = () => {};
+import axios from 'axios';
 
-export const fetchPokemon = () => {};
+//Action Types
+const GET_POKEMON = 'GET_POKEMON';
 
-// Take a look at app/redux/index.js to see where this reducer is
-// added to the Redux store with combineReducers
-export default function pokemonReducer() {
-	return null;
+//Action Creators
+export const gotPokemon = (pokemon) => {
+	return {
+		type: GET_POKEMON,
+		pokemon,
+	};
+};
+
+//Thunk
+export const fetchPokemon = () => {
+	return async (dispatch) => {
+		const { data: pokemon } = await axios.get('/api/pokemon');
+		dispatch(gotPokemon(pokemon));
+	};
+};
+
+const initialState = [];
+
+export default function pokemonReducer(state = initialState, action) {
+	switch (action.type) {
+		case GET_POKEMON:
+			return action.pokemon;
+		default:
+			return state;
+	}
 }

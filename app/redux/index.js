@@ -2,7 +2,7 @@ import { combineReducers } from 'redux';
 import pokemonReducer from './pokedex';
 
 const appReducer = combineReducers({
-	pokemons: pokemonReducer,
+	pokemon: pokemonReducer,
 });
 
 export default appReducer;

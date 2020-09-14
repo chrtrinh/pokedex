@@ -17,6 +17,10 @@ const seed = async () => {
 			const { id: pokeId, name, sprites, types: typesRaw } = data;
 			const imageUrl = sprites.other['official-artwork'].front_default;
 
+			let formattedName = name;
+			formattedName =
+				formattedName.slice(0, 1).toUpperCase() + formattedName.slice(1);
+
 			const types = [];
 			typesRaw.forEach((type) => {
 				const { name } = type.type;
@@ -24,7 +28,7 @@ const seed = async () => {
 			});
 
 			await Pokemon.create({
-				name,
+				name: formattedName,
 				pokeId,
 				imageUrl,
 				types,

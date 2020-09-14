@@ -1,18 +1,39 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../../public/Pokedex.css';
 import PokemonCard from './PokemonCard';
+import { connect } from 'react-redux';
+import { fetchPokemon } from '../redux/pokedex';
 
-function Pokedex() {
-	return (
-		<div className="pokedex">
-			<div className="pokedex__container">
-				<PokemonCard />
-				<PokemonCard />
-				<PokemonCard />
-				<PokemonCard />
+class Pokedex extends React.Component {
+	componentDidMount() {
+		this.props.fetchPokemon();
+	}
+
+	render() {
+		let pokemons = this.props.pokemon;
+
+		return (
+			<div className="pokedex">
+				<div className="pokedex__container">
+					{pokemons.map((pokemon) => {
+						return <PokemonCard pokemon={pokemon} key={pokemon.pokeId} />;
+					})}
+				</div>
 			</div>
-		</div>
-	);
+		);
+	}
 }
 
-export default Pokedex;
+const mapState = (state) => {
+	return {
+		pokemon: state.pokemon,
+	};
+};
+
+const mapDispatch = (dispatch) => {
+	return {
+		fetchPokemon: () => dispatch(fetchPokemon()),
+	};
+};
+
+export default connect(mapState, mapDispatch)(Pokedex);
