@@ -10,9 +10,6 @@ function Pokedex() {
 				<PokemonCard />
 				<PokemonCard />
 				<PokemonCard />
-				<PokemonCard />
-				<PokemonCard />
-				<PokemonCard />
 			</div>
 		</div>
 	);

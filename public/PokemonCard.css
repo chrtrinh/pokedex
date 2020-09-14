@@ -1,4 +1,5 @@
 .pokemonCard {
+	padding: 10px;
 	margin: 20px;
 	height: 200px;
 	display: flex;
@@ -42,6 +43,7 @@
 
 .pokemonCard__content > div > .MuiCardActionArea-root {
 	display: flex;
+	/* Change the background color to reflect types */
 }
 
 .pokemonCard__footer {
@@ -52,4 +54,18 @@
 .pokemonCard__footer > h4 {
 	display: flex;
 	font-size: 25px;
+}
+
+.pokemonCard__tags {
+	margin-top: 6px;
+	display: flex;
+}
+
+.pokemonCard__tags > h4 {
+	display: flex;
+	width: 60px;
+	border: 1px solid black;
+	border-radius: 1rem;
+	margin-right: 10px;
+	justify-content: center;
 }

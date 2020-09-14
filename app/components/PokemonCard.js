@@ -5,7 +5,6 @@ import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
-import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles({
 	root: {
@@ -36,6 +35,10 @@ function PokemonCard() {
 						<div className="pokemonCard__footer">
 							<h4>Bublasaur</h4>
 							<h4>#1</h4>
+						</div>
+						<div className="pokemonCard__tags">
+							<h4>Grass</h4>
+							<h4>Poison</h4>
 						</div>
 					</CardContent>
 				</Card>
