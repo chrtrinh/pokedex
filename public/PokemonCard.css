@@ -1,0 +1,55 @@
+.pokemonCard {
+	margin: 20px;
+	height: 200px;
+	display: flex;
+	align-items: center;
+}
+
+.pokemonCard__content {
+	display: flex;
+	margin: 10px;
+	width: 400px;
+}
+
+.pokemonCard__img {
+	flex: 0.3;
+	margin-right: 20px;
+}
+
+.pokemonCard__img > img {
+	width: 100%;
+	height: auto;
+}
+
+.pokemonCard__data {
+	padding: 5px;
+	flex: 0.7;
+}
+
+.pokemonCard__id {
+	margin-left: 10px;
+	margin-right: 10px;
+	color: black;
+	font-size: 20px;
+	display: flex;
+	justify-content: flex-end;
+}
+
+/* Styling Material UI */
+.pokemonCard__content > .MuiPaper-root {
+	border: 1px solid black;
+}
+
+.pokemonCard__content > div > .MuiCardActionArea-root {
+	display: flex;
+}
+
+.pokemonCard__footer {
+	display: flex;
+	justify-content: space-between;
+}
+
+.pokemonCard__footer > h4 {
+	display: flex;
+	font-size: 25px;
+}

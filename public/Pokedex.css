@@ -1,0 +1,26 @@
+.pokedex {
+	border: 2px solid red;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: center;
+	overflow-x: scroll;
+}
+
+.pokedex::-webkit-scrollbar {
+	display: none;
+}
+
+/* Hide scrollbar for IE, Edge, and Firefox */
+.pokedex {
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+
+.pokedex__container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: center;
+	overflow-x: scroll;
+}
