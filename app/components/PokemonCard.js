@@ -8,6 +8,7 @@ import CardContent from '@material-ui/core/CardContent';
 import SinglePokemonCard from './SinglePokemonCard';
 import Modal from '@material-ui/core/Modal';
 
+//Sets Position of Modal
 function getModalStyle() {
 	const top = 50;
 	const left = 50;
@@ -19,6 +20,7 @@ function getModalStyle() {
 	};
 }
 
+//useStyles used for Material UI styling
 const useStyles = makeStyles((theme) => ({
 	media: {
 		height: 225,
@@ -26,9 +28,10 @@ const useStyles = makeStyles((theme) => ({
 	},
 	paper: {
 		position: 'absolute',
-		width: 400,
+		width: '50%',
 		backgroundColor: 'white',
 		border: '2px solid #000',
+		borderRadius: '2rem',
 		outlineWidth: '0',
 		boxShadow: theme.shadows[5],
 		padding: theme.spacing(2, 4, 3),
@@ -58,8 +61,8 @@ function PokemonCard(props) {
 	};
 
 	const body = (
-		<div style={modalStyle} className={classes.paper}>
-			<SinglePokemonCard />
+		<div style={modalStyle} className={`${classes.paper} pokemonCard__body`}>
+			<SinglePokemonCard pokemon={props.pokemon} />
 		</div>
 	);
 
@@ -89,8 +92,8 @@ function PokemonCard(props) {
 					<Modal
 						open={open}
 						onClose={handleClose}
-						aria-labelledby="simple-modal-title"
-						aria-describedby="simple-modal-description"
+						aria-labelledby="Pokemon"
+						aria-describedby="metadata"
 					>
 						{body}
 					</Modal>

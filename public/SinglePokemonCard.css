@@ -1,0 +1,24 @@
+.singlePokemonCard {
+	display: flex;
+	flex-direction: column;
+	justify-items: center;
+	align-items: center;
+}
+
+.singlePokemonCard__image > img {
+	object-fit: contain;
+	width: auto;
+	height: auto;
+}
+
+.singlePokemonCard__data {
+	font-size: 50px;
+}
+
+@media only screen and (max-width: 730px) {
+	.singlePokemonCard__image > img {
+		object-fit: contain;
+		width: 100%;
+		height: auto;
+	}
+}
