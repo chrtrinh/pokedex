@@ -1,26 +1,38 @@
 .pokedex {
 	border: 2px solid red;
+	background-color: #c81d25;
 	display: flex;
+	flex-direction: column;
 	flex-wrap: wrap;
 	justify-content: center;
 	align-content: center;
-	overflow-x: scroll;
+	align-items: center;
 }
 
 .pokedex::-webkit-scrollbar {
 	display: none;
 }
 
-/* Hide scrollbar for IE, Edge, and Firefox */
 .pokedex {
 	-ms-overflow-style: none;
 	scrollbar-width: none;
 }
 
 .pokedex__container {
+	height: 100%;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 	align-content: center;
 	overflow-x: scroll;
+	overflow-y: hidden;
+}
+
+.pokedex__container::-webkit-scrollbar {
+	display: none;
+}
+
+.pokedex > h4 {
+	font-size: 75px;
+	color: white;
 }

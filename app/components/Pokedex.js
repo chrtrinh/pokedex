@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import '../../public/Pokedex.css';
 import PokemonCard from './PokemonCard';
 import { connect } from 'react-redux';
@@ -14,6 +14,8 @@ class Pokedex extends React.Component {
 
 		return (
 			<div className="pokedex">
+				<h4>Pokedex</h4>
+
 				<div className="pokedex__container">
 					{pokemons.map((pokemon) => {
 						return <PokemonCard pokemon={pokemon} key={pokemon.pokeId} />;
