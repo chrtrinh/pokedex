@@ -10,11 +10,17 @@ const seed = async () => {
 		await db.sync({ force: true });
 
 		for (let i = 1; i <= 151; i++) {
-			// console.log('Currently working on id: ', i);
 			const { data } = await axios.get(
 				`https://pokeapi.co/api/v2/pokemon/${i}/`
 			);
-			const { id: pokeId, name, sprites, types: typesRaw } = data;
+			const {
+				id: pokeId,
+				name,
+				sprites,
+				types: typesRaw,
+				height,
+				weight,
+			} = data;
 			const imageUrl = sprites.other['official-artwork'].front_default;
 
 			let formattedName = name;
@@ -32,21 +38,15 @@ const seed = async () => {
 				pokeId,
 				imageUrl,
 				types,
+				height,
+				weight,
 			});
-
-			// View Data
-			// console.log('ID: ', pokeId);
-			// console.log('Name: ', name);
-			// console.log('ImageUrl: ', imageUrl);
-			// console.log('Types: ', types);
 		}
 
 		const end = window.performance.now();
 		const execTime = end - start;
 		const sec = Math.floor((execTime / 1000) % 60);
 		console.log(`Database seeded from API in ${sec} seconds`);
-
-		// seed your database here!
 	} catch (err) {
 		console.log(red(err));
 	}

@@ -17,4 +17,12 @@ module.exports = db.define('pokemon', {
 	types: {
 		type: Sequelize.ARRAY(Sequelize.STRING),
 	},
+	weight: {
+		type: Sequelize.DECIMAL,
+		allowNull: false,
+	},
+	height: {
+		type: Sequelize.DECIMAL,
+		allowNull: false,
+	},
 });

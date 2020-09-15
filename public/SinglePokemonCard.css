@@ -12,7 +12,26 @@
 }
 
 .singlePokemonCard__data {
+	display: flex;
+	align-items: center;
+}
+
+.singlePokemonCard__data > h4 {
 	font-size: 50px;
+}
+
+.singlePokemonCard__tags {
+	display: flex;
+}
+
+.singlePokemonCard__tags > h4 {
+	border: 1px solid black;
+	display: flex;
+
+	justify-content: center;
+	border-radius: 1rem;
+	width: 100px;
+	margin-right: 5px;
 }
 
 @media only screen and (max-width: 730px) {

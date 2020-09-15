@@ -48,7 +48,7 @@
 
 /* Styling Material UI */
 .pokemonCard__content > .MuiPaper-root {
-	border: 1px solid black;
+	border: 2px solid black;
 }
 
 .pokemonCard__content > div {
