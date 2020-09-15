@@ -1,0 +1,64 @@
+.stats {
+	margin: 20px;
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+}
+
+.stats__left {
+	justify-content: center;
+	justify-items: center;
+	align-items: center;
+	align-content: center;
+}
+
+.stats__left > h4 {
+	font-size: 30px;
+	border-bottom: 1px solid black;
+}
+
+.stats__left > h2 {
+	margin-top: 10px;
+	text-align: center;
+}
+
+.stats__right > h4 {
+	font-size: 30px;
+	border-bottom: 1px solid black;
+}
+
+.stats__right > h2 {
+	margin-top: 10px;
+	text-align: center;
+}
+
+@media only screen and (max-width: 750px) {
+	/* .singlePokemonCard__image > img {
+		object-fit: contain;
+		width: 100%;
+		height: auto;
+	} */
+	.stats__left > h4 {
+		font-size: 15px;
+		border-bottom: 1px solid black;
+		text-align: center;
+	}
+
+	.stats__left > h2 {
+		margin-top: 8px;
+		font-size: 16px;
+		text-align: center;
+	}
+
+	.stats__right > h4 {
+		font-size: 15px;
+		border-bottom: 1px solid black;
+		text-align: center;
+	}
+
+	.stats__right > h2 {
+		margin-top: 8px;
+		font-size: 16px;
+		text-align: center;
+	}
+}

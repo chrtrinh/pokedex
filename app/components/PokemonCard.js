@@ -41,14 +41,30 @@ const useStyles = makeStyles((theme) => ({
 function PokemonCard(props) {
 	const classes = useStyles();
 
-	const { name, pokeId, imageUrl, types, speciesId } = props.pokemon;
+	const {
+		name,
+		pokeId,
+		imageUrl,
+		types,
+		speciesId,
+		height,
+		weight,
+	} = props.pokemon;
 
 	const [modalStyle] = useState(getModalStyle);
 	const [open, setOpen] = useState(false);
 	const [selectedPokemon, setSelectedPokemon] = useState({});
 
 	const handleOpen = ({ name, pokeId, imageUrl, types }) => {
-		setSelectedPokemon({ name, pokeId, imageUrl, types, speciesId });
+		setSelectedPokemon({
+			name,
+			pokeId,
+			imageUrl,
+			types,
+			speciesId,
+			height,
+			weight,
+		});
 		setOpen(true);
 	};
 
@@ -71,7 +87,11 @@ function PokemonCard(props) {
 	return (
 		<div className="pokemonCard" key={pokeId} onClick={onClick}>
 			<div className="pokemonCard__content">
-				<Card onClick={() => handleOpen({ name, pokeId, imageUrl, types })}>
+				<Card
+					onClick={() =>
+						handleOpen({ name, pokeId, imageUrl, types, height, weight })
+					}
+				>
 					<CardActionArea>
 						<CardMedia
 							component="img"

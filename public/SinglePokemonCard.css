@@ -5,9 +5,16 @@
 	align-items: center;
 }
 
+.singlePokemonCard__image {
+	display: flex;
+	justify-items: center;
+	align-content: center;
+	justify-content: center;
+}
+
 .singlePokemonCard__image > img {
 	object-fit: contain;
-	width: auto;
+	width: 70%;
 	height: auto;
 }
 
@@ -34,7 +41,6 @@
 	border: 1px solid black;
 	padding: 5px;
 	display: flex;
-
 	justify-content: center;
 	border-radius: 1rem;
 	width: 100px;
@@ -52,7 +58,7 @@
 }
 
 .singlePokemonCard__evolutions > img {
-	width: 50%;
+	width: 35%;
 	object-fit: contain;
 }
 
@@ -66,10 +72,31 @@
 	width: 100px;
 }
 
-@media only screen and (max-width: 730px) {
-	.singlePokemonCard__image > img {
+@media only screen and (max-width: 750px) {
+	/* .singlePokemonCard__image > img {
 		object-fit: contain;
 		width: 100%;
 		height: auto;
+	} */
+
+	.singlePokemonCard > h4 {
+		margin-top: 50px;
+		font-size: 15px;
+	}
+
+	.singlePokemonCard__tags > h4 {
+		border: 1px solid black;
+		padding: 2px;
+		display: flex;
+		justify-content: center;
+		border-radius: 1rem;
+		width: 60px;
+		font-size: 12px;
+		margin-right: 5px;
+	}
+
+	.singlePokemonCard__evolutions > img {
+		width: 70%;
+		object-fit: contain;
 	}
 }
