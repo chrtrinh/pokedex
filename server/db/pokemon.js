@@ -25,4 +25,8 @@ module.exports = db.define('pokemon', {
 		type: Sequelize.DECIMAL,
 		allowNull: false,
 	},
+	speciesId: {
+		type: Sequelize.INTEGER,
+		allowNull: false,
+	},
 });

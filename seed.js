@@ -20,8 +20,16 @@ const seed = async () => {
 				types: typesRaw,
 				height,
 				weight,
+				species,
 			} = data;
 			const imageUrl = sprites.other['official-artwork'].front_default;
+
+			const { data: response } = await axios.get(
+				`https://pokeapi.co/api/v2/pokemon-species/${pokeId}/`
+			);
+
+			let evolutionsUrl = response.evolution_chain.url;
+			let speciesId = evolutionsUrl.slice(42, -1);
 
 			let formattedName = name;
 			formattedName =
@@ -40,6 +48,7 @@ const seed = async () => {
 				types,
 				height,
 				weight,
+				speciesId,
 			});
 		}
 
