@@ -20,7 +20,6 @@ const seed = async () => {
 				types: typesRaw,
 				height,
 				weight,
-				species,
 			} = data;
 			const imageUrl = sprites.other['official-artwork'].front_default;
 

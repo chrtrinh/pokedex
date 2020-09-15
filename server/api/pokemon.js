@@ -11,4 +11,22 @@ router.get('/', async (req, res, next) => {
 	}
 });
 
+router.get('/:speciesId', async (req, res, next) => {
+	try {
+		const { speciesId } = req.params;
+		const result = await Pokemon.findAll({
+			where: {
+				speciesId,
+			},
+		});
+		if (result.length > 0) {
+			res.json(result);
+		} else {
+			res.sendStatus(404);
+		}
+	} catch (error) {
+		next(error);
+	}
+});
+
 module.exports = router;
