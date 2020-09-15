@@ -29,8 +29,8 @@ const seed = async () => {
 
 			const types = [];
 			typesRaw.forEach((type) => {
-				const { name } = type.type;
-				types.push(name);
+				const { name: item } = type.type;
+				types.push(item);
 			});
 
 			await Pokemon.create({

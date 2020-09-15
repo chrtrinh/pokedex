@@ -29,8 +29,11 @@ function SinglePokemonCard(props) {
 				let currentPosition = evolutions.chain.evolves_to;
 				while (!found) {
 					found = true;
-
-					if (currentPosition.length != 0) {
+					if (currentPosition.length > 1) {
+						for (let i = 0; i < currentPosition.length; i++) {
+							evolutionsArr.push(currentPosition[i].species.url.slice(42, -1));
+						}
+					} else if (currentPosition.length !== 0) {
 						found = false;
 						evolutionsArr.push(currentPosition[0].species.url.slice(42, -1));
 						currentPosition = currentPosition[0].evolves_to;
@@ -38,6 +41,11 @@ function SinglePokemonCard(props) {
 				}
 
 				setValue(true);
+
+				evolutionsArr = evolutionsArr.filter((item) => {
+					return parseInt(item, 10) <= 151;
+				});
+
 				setEvolution(evolutionsArr);
 			}
 		};
