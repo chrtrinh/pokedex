@@ -13,22 +13,22 @@
 }
 
 .stats__left > h4 {
-	font-size: 30px;
+	font-size: 20px;
 	border-bottom: 1px solid black;
 }
 
 .stats__left > h2 {
-	margin-top: 10px;
+	margin-top: 8px;
 	text-align: center;
 }
 
 .stats__right > h4 {
-	font-size: 30px;
+	font-size: 20px;
 	border-bottom: 1px solid black;
 }
 
 .stats__right > h2 {
-	margin-top: 10px;
+	margin-top: 8px;
 	text-align: center;
 }
 

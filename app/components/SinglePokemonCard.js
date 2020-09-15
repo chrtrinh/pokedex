@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { fetchEvolutions } from '../redux/singlePokemon';
 import '../../public/SinglePokemonCard.css';
 import Stats from './Stats';
+import BaseStats from './BaseStats';
 
 class SinglePokemonCard extends React.Component {
 	async componentDidMount() {
@@ -33,6 +34,7 @@ class SinglePokemonCard extends React.Component {
 					))}
 				</div>
 				<Stats stats={{ height, weight }} />
+				<BaseStats pokeId={pokeId} />
 				<h4>Evolutions</h4>
 				<div className="singlePokemonCard__evolutionsContainer">
 					{evolutions.length <= 1 ? (

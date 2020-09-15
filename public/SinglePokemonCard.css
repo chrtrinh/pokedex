@@ -10,6 +10,7 @@
 	justify-items: center;
 	align-content: center;
 	justify-content: center;
+	width: 35%;
 }
 
 .singlePokemonCard__image > img {
@@ -72,16 +73,24 @@
 	width: 100px;
 }
 
-@media only screen and (max-width: 750px) {
-	/* .singlePokemonCard__image > img {
+@media only screen and (max-width: 1250px) {
+	.singlePokemonCard__image > img {
 		object-fit: contain;
-		width: 100%;
+		width: 200px;
 		height: auto;
-	} */
+	}
+}
+
+@media only screen and (max-width: 750px) {
+	.singlePokemonCard__image > img {
+		object-fit: contain;
+		width: 200px;
+		height: auto;
+	}
 
 	.singlePokemonCard > h4 {
 		margin-top: 50px;
-		font-size: 15px;
+		font-size: 20px;
 	}
 
 	.singlePokemonCard__tags > h4 {
