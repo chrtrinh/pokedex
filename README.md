@@ -2,6 +2,8 @@
 
 A Pokedex app.
 
+A link to a deployed version of the app: https://pokedex-concept.herokuapp.com/
+
 ## Setup
 
 ### MacOS/Linux
