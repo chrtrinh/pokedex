@@ -20,8 +20,6 @@ function BaseStats({ pokeId }) {
 		fetchStats();
 	}, []);
 
-	console.log(baseStats);
-
 	return (
 		<div className="baseStats">
 			<h4>Base Stats</h4>
