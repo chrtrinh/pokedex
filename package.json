@@ -62,6 +62,7 @@
 		"sinon-chai": "^3.5.0",
 		"style-loader": "^0.21.0",
 		"supertest": "^3.1.0",
+		"volleyball": "1.5.1",
 		"wait-for-expect": "^3.0.2",
 		"webpack": "^4.39.2",
 		"webpack-cli": "^3.3.7"
