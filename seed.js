@@ -1,12 +1,12 @@
 const { green, red } = require('chalk');
 const { db, Pokemon } = require('./server/db');
 const axios = require('axios');
-const { JSDOM } = require('jsdom');
-const { window } = new JSDOM();
+// const { JSDOM } = require('jsdom');
+// const { window } = new JSDOM();
 
 const seed = async () => {
 	try {
-		const start = window.performance.now();
+		// const start = window.performance.now();
 		await db.sync({ force: true });
 
 		for (let i = 1; i <= 151; i++) {
@@ -51,10 +51,11 @@ const seed = async () => {
 			});
 		}
 
-		const end = window.performance.now();
-		const execTime = end - start;
-		const sec = Math.floor((execTime / 1000) % 60);
-		console.log(`Database seeded from API in ${sec} seconds`);
+		// const end = window.performance.now();
+		// const execTime = end - start;
+		// const sec = Math.floor((execTime / 1000) % 60);
+		// console.log(`Database seeded from API in ${sec} seconds`);
+		console.log('seeded successfully');
 	} catch (err) {
 		console.log(red(err));
 	}
