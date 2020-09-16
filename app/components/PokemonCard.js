@@ -28,7 +28,9 @@ const useStyles = makeStyles((theme) => ({
 	},
 	paper: {
 		position: 'absolute',
-		width: '50%',
+		width: '35%',
+		minWidth: '300px',
+		height: 'auto',
 		backgroundColor: 'white',
 		border: '2px solid #000',
 		borderRadius: '2rem',
