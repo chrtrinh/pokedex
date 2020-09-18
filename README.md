@@ -4,6 +4,8 @@ A Pokedex app.
 
 A link to a deployed version of the app: https://pokedex-concept.herokuapp.com/
 
+Youtube: https://www.youtube.com/watch?v=D-XiV1DZ9cE
+
 ## Setup
 
 ### MacOS/Linux
